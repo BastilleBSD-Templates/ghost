@@ -1,0 +1,12 @@
+
+npm install -g ghost-cli
+
+cd ~/Documents
+mkdir ghost
+cd ghost
+pwd
+ghost install local
+
+
+
+
