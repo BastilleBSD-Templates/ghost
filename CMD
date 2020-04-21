@@ -1,4 +1,6 @@
+ln -s /usr/local/bin/python2.7 /usr/local/python
 
+npm install sqlite3 --save
 npm install -g ghost-cli
 
 cd ~
@@ -7,6 +9,15 @@ cd ghost
 pwd
 ghost install local
 
+mkdir ~/repo
+cd ~/repo
+git clone https://github.com/DrBoyle/bastille-ghost-ipfix.git
+ln -s ~/repo/bastille-ghost-ipfix/fixIP.py ~/ghost/fixIP.py
 
+cd ~/ghost
+cp config.development.json config.production.json
+ifconfig bastille0 | awk '$1 == "inet" {print $2 > "jailIP.md"}'
+python fixIP.py
+ghost start
 
 
