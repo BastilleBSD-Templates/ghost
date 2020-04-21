@@ -1,6 +1,5 @@
 ln -s /usr/local/bin/python2.7 /usr/local/python
 
-npm install sqlite3 --save
 npm install -g ghost-cli
 
 cd ~
@@ -13,6 +12,8 @@ mkdir ~/repo
 cd ~/repo
 git clone https://github.com/DrBoyle/bastille-ghost-ipfix.git
 ln -s ~/repo/bastille-ghost-ipfix/fixIP.py ~/ghost/fixIP.py
+
+npm install sqlite3 --save
 
 cd ~/ghost
 cp config.development.json config.production.json
