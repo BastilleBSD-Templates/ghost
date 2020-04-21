@@ -1,4 +1,4 @@
-ln -s /usr/local/bin/python2.7 /usr/local/python
+ln -s /usr/local/bin/python2.7 /usr/local/bin/python
 
 npm install -g ghost-cli
 
